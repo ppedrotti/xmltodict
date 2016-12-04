@@ -45,7 +45,7 @@ class _DictSAXHandler(object):
                  item_depth=0,
                  item_callback=lambda *args: True,
                  xml_attribs=True,
-                 attr_prefix='@',
+                 attr_prefix='',
                  cdata_key='#text',
                  force_cdata=False,
                  cdata_separator='',
@@ -336,7 +336,7 @@ def _process_namespace(name, namespaces, ns_sep=':', attr_prefix='@'):
 
 
 def _emit(key, value, content_handler,
-          attr_prefix='@',
+          attr_prefix='',
           cdata_key='#text',
           depth=0,
           preprocessor=None,
